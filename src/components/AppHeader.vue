@@ -44,6 +44,8 @@ header {
 
 ul {
   list-style-type: none;
+  display: flex;
+  align-items: center;
 }
 
 li {

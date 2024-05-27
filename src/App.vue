@@ -11,7 +11,7 @@ export default {
   data() {
     return {
       appTitle: "Rick 'n' Morty",
-      appLinks // è syntax sugar di ---> appLinks: appLinks
+      appLinks, // è syntax sugar di ---> appLinks: appLinksl
     }
   },
   methods: {
@@ -27,13 +27,25 @@ export default {
   <AppHeader :title="appTitle" :links="appLinks" background="#FF6600" />
 
   <main>
-    <h1>Benvenuto in {{ appTitle }}</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit deserunt distinctio ipsum iure totam ullam maiores
-      perspiciatis maxime! Accusantium ad tenetur architecto autem eos blanditiis nesciunt dolor, quaerat ut
-      repudiandae.</p>
+    <section id="intro">
+      <h1>Benvenuto in {{ appTitle }}</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit deserunt distinctio ipsum iure totam ullam
+        maiores
+        perspiciatis maxime! Accusantium ad tenetur architecto autem eos blanditiis nesciunt dolor, quaerat ut
+        repudiandae.</p>
+    </section>
+
     <CharacterList />
   </main>
 
 </template>
 
-<style></style>
+<style scoped>
+main {
+  padding: 1rem
+}
+
+section#intro {
+  margin: 1rem 0;
+}
+</style>
