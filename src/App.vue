@@ -2,7 +2,7 @@
 import AppHeader from './components/AppHeader.vue';
 import CharacterList from './components/CharacterList.vue';
 import appLinks from './data/AppHeaderLinks.js';
-import store from './data/store.js';
+// import store from './data/store.js';
 
 export default {
   components: {
@@ -13,16 +13,16 @@ export default {
     return {
       appTitle: "Rick 'n' Morty",
       appLinks, // è syntax sugar di ---> appLinks: appLinksl
-      store
+      // store
     }
   },
   methods: {
 
   },
   created() {
-    axios.get("https://rickandmortyapi.com/api/character").then(risultato => {
-      this.store.personaggi = risultato.data.results;
-    });
+    // axios.get("https://rickandmortyapi.com/api/character").then(risultato => {
+    //   this.store.personaggi = risultato.data.results;
+    // });
   },
   mounted() {
 
