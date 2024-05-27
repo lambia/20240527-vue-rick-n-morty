@@ -1,5 +1,6 @@
 <script>
 import CharacterCard from './CharacterCard.vue';
+import store from '../data/store.js';
 
 export default {
     name: "CharacterList",
@@ -9,12 +10,7 @@ export default {
     props: {},
     data() {
         return {
-            personaggi: [
-                "Rick",
-                "Morty",
-                "Evil Morty",
-                "Gerry"
-            ]
+            store
         }
     },
     methods: {
@@ -25,9 +21,9 @@ export default {
 
 <template>
 
-    <h3>Personaggi:</h3>
+    <h3>Ecco i personaggi che vivono su {{ store.pianeta }}</h3>
     <ul>
-        <CharacterCard v-for="personaggio in personaggi" :character="personaggio" />
+        <CharacterCard v-for="personaggio in store.personaggi" :character="personaggio" />
     </ul>
 
 </template>
