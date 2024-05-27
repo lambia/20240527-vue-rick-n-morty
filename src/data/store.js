@@ -2,13 +2,7 @@ import { reactive } from 'vue';
 
 const iMieiDati = reactive({
     personaggi: [
-        "Rick Sanchez",
-        "Morty Smith",
-        "Evil Morty",
-        "Jerry Smith",
-        "Beth Sanchez",
-        "Summer Smith",
-        "Formiche-negli-occhi Johnson"
+        //vuoto, i dati li inserisco al mounted di App.vue grazie ad axios
     ],
     pianeta: "Terra C-137"
 });

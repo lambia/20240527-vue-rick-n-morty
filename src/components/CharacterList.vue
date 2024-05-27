@@ -22,10 +22,15 @@ export default {
 <template>
 
     <h3>Ecco i personaggi che vivono su {{ store.pianeta }}</h3>
-    <ul>
+    <div id="cardContainer">
         <CharacterCard v-for="personaggio in store.personaggi" :character="personaggio" />
-    </ul>
+    </div>
 
 </template>
 
-<style></style>
+<style scoped>
+div#cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+</style>
