@@ -1,6 +1,6 @@
 import { reactive } from 'vue';
 
-const iMieiDati = reactive({
+const ilMioOggettone = {
 
     pianeta: "Terra C-137",
 
@@ -55,6 +55,8 @@ const iMieiDati = reactive({
             image: "https://rickandmortyapi.com/api/character/avatar/4.jpeg"
         }
     ]
-});
+};
+
+const iMieiDati = reactive(ilMioOggettone);
 
 export default iMieiDati;

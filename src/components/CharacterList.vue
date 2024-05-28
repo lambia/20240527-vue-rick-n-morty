@@ -15,6 +15,11 @@ export default {
     },
     methods: {
 
+    },
+    mounted() {
+        // console.log("store diretto", store);
+        // console.log("store dal data", this.store);
+
     }
 }
 </script>
