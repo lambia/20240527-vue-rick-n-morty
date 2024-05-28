@@ -2,7 +2,7 @@
 export default {
     name: "CharacterCard",
     props: {
-        character: String
+        character: Object
     },
     data() {
         return {
@@ -27,7 +27,7 @@ export default {
         <p>Stato: {{ character.status }}</p>
         <p>Origine: {{ character.origin.name }}</p>
         <p>Ultima posizione nota: {{ character.location.name }}</p>
-    </div class="card">
+    </div>
 
 </template>
 
