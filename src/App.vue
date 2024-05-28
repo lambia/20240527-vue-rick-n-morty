@@ -15,11 +15,14 @@ export default {
       appTitle: "Rick 'n' Morty",
       appLinks, // è syntax sugar di ---> appLinks: appLinksl
       store,
+      searchString: "",
     }
   },
   methods: {
     getPersonaggi() {
-      axios.get("https://rickandmortyapi.com/api/character").then(risultato => {
+      console.log("cerca: ", this.searchString);
+
+      axios.get("https://rickandmortyapi.com/api/character?name=" + this.searchString).then(risultato => {
         // console.log(risultato.data.results);
         this.store.personaggi = risultato.data.results;
       });
@@ -37,6 +40,8 @@ export default {
 
 <template>
   <AppHeader :title="appTitle" :links="appLinks" background="#FF6600" />
+  <input type="text" v-model="searchString" placeholder="Cosa vuoi cercare oggi?">
+  <button @click="getPersonaggi">Cerca!</button>
 
   <main>
     <section id="intro">
